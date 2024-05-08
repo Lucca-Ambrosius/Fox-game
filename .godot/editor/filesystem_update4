@@ -1,2 +1,4 @@
 res://scenes/world.tscn
+res://Player/player.tscn
+res://World/bush.tscn
 res://Codigos-scripts/Player.gd
