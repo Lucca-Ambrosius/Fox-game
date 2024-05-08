@@ -1,26 +1,29 @@
 extends CharacterBody2D
 
-const Xlr8 = 10
-const MAX_SPEED = 120
-const FRICTION = 20
+const Xlr8 = 1000
+const MAX_SPEED = 100
+const FRICTION = 800
+var vemvemaqui = velocity
+# vemvemaqui created to fix issue when coliding with objects
 
 func _physics_process(delta):
-
+	
 	var input_vector = Vector2.ZERO
+
+	motion_mode = MOTION_MODE_FLOATING
+	#fixes sliding in walls without slowdown
 
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	input_vector = input_vector.normalized()
 
 	if input_vector != Vector2.ZERO:
-		velocity += input_vector * Xlr8 * delta
-		#adicionando o + com o sinal de igual, faz com que o valor seja adicionado a cada frame, xlr8 que é a aceleração, seja adicionado de pouco a pouco para chegar até a vel max
-		velocity = velocity.limit_length(MAX_SPEED * delta)
+		velocity = velocity.move_toward(input_vector * MAX_SPEED, Xlr8 * delta)
 
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	
-	move_and_collide(velocity)
+	vemvemaqui = move_and_slide()
 
 
 
