@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715206048
+::res://::1715226095
 icon.svg::CompressedTexture2D::1944282407023519405::1714964737::1714964742::1::::<><>::
 README.md::TextFile::-1::1715112958::0::1::::<><>::
 ::res://Action RPG Resources/::1714964775
@@ -38,10 +38,12 @@ Grass.png::CompressedTexture2D::4494298519133472053::1577977538::1714964801::1::
 GrassBackground.png::CompressedTexture2D::8827385107626128205::1577977538::1714964801::1::::<><>::
 Tree.png::CompressedTexture2D::402217929728355521::1577977538::1714964801::1::::<><>::
 ::res://Codigos-scripts/::1715114085
-Player.gd::GDScript::-1::1715149236::0::1::::<>CharacterBody2D<>::
-::res://Player/::1715199450
-player.tscn::PackedScene::7563068151750898283::1715199450::0::1::::<><>::res://Codigos-scripts/Player.gd<>uid://brub1i73d6udn::::res://Action RPG Resources/Player/Player.png
-::res://scenes/::1715199470
-world.tscn::PackedScene::3053130523719783205::1715199470::0::1::::<><>::uid://cdswknr1sa8qj::::res://Action RPG Resources/World/Bush.png<>uid://df0uvlmr1ykjr::::res://Player/player.tscn
+Player.gd::GDScript::-1::1715225734::0::1::::<>CharacterBody2D<>::
+::res://Player/::1715225200
+player.tscn::PackedScene::7563068151750898283::1715225200::0::1::::<><>::res://Codigos-scripts/Player.gd<>uid://brub1i73d6udn::::res://Action RPG Resources/Player/Player.png
+::res://scenes/::1715225200
+world.tscn::PackedScene::3053130523719783205::1715225200::0::1::::<><>::uid://b7ll8jkbbqqrq::::res://World/bush.tscn<>uid://df0uvlmr1ykjr::::res://Player/player.tscn
 ::res://scripts/::1715113923
 Player.gd::GDScript::-1::1715114051::0::1::::<>CharacterBody2D<>::
+::res://World/::1715208425
+bush.tscn::PackedScene::4655899141729702722::1715208425::0::1::::<><>::uid://cdswknr1sa8qj::::res://Action RPG Resources/World/Bush.png
