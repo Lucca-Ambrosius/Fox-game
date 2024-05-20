@@ -7,10 +7,10 @@
 y_sort_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("2_74ant")]
-position = Vector2(128, 64)
+position = Vector2(136, 72)
 
 [node name="Bush" parent="." instance=ExtResource("2_6e0gr")]
-position = Vector2(40, 64)
+position = Vector2(48, 64)
 
 [node name="Bush2" parent="." instance=ExtResource("2_6e0gr")]
 position = Vector2(224, 64)

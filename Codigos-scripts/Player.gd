@@ -9,6 +9,8 @@ var vemvemaqui = velocity
 @onready var animationPlayer = $AnimationPlayer
 # its gonna call the node from the same family that is called AnimationPlayer so the character can get his animations
 # and the @onready makes that the variable will only be created when the game is ready
+@onready var animationTree = $AnimationTree
+@onready var animationState = animationTree.get("parameters/playback")
 
 
 func _physics_process(delta):
@@ -25,14 +27,13 @@ func _physics_process(delta):
 
 
 	if input_vector != Vector2.ZERO:
-		if input_vector.x > 0:
-			animationPlayer.play("RunRight")
-		else:
-			animationPlayer.play("RunLeft")
+		animationTree.set("parameters/Idle/blend_position", input_vector)
+		animationTree.set("parameters/Run/blend_position", input_vector)
+		animationState.travel("Run")
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, Xlr8 * delta)
 
 	else:
-		animationPlayer.play("IdleRight")
+		animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 	
 	vemvemaqui = move_and_slide()
